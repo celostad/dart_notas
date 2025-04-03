@@ -4,6 +4,7 @@ void main() {
   List<String> notas = <String>[];
   getComando();
   adicionaNota(notas);
+  listarNotas(notas);
 }
 
 String getComando() {
@@ -34,4 +35,11 @@ List<String> adicionaNota(List<String> notas) {
 
   notas.add(nota!);
   return notas;
+}
+
+void listarNotas(List<String> notas){
+  // notas.forEach(print); // faz a mesma coisa
+  for(var i=0; i < notas.length; i++){
+    print(notas[i]);
+  }
 }
