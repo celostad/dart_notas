@@ -35,26 +35,37 @@ List<String> adicionaNota(List<String> notas) {
   return notas;
 }
 
-void listarNotas(List<String> notas){
+void listarNotas(List<String> notas) {
   // notas.forEach(print); // faz a mesma coisa
-  for(var i=0; i < notas.length; i++){
+  for (var i = 0; i < notas.length; i++) {
     print(notas[i]);
   }
 }
 
-void menu(List<String> notas){
+void menu(List<String> notas) {
+  print("");
+  cabecalho();
+  print("");
   String comando = getComando();
-
-  switch(comando){
+  print("");
+  switch (comando) {
     case "1":
-    adicionaNota(notas);
-    menu(notas);
+      adicionaNota(notas);
+      menu(notas);
 
     case "2":
-    listarNotas(notas);
-    menu(notas);
+      listarNotas(notas);
+      menu(notas);
 
     case "3":
-    print("Até breve!");
+      print("Até breve!");
   }
+}
+
+void cabecalho() {
+  print("  _  _     _           ");
+  print(" | \| |___| |_ __ _ ___");
+  print(" | .\` / _ \  _/ _\` (_-<");
+  print(" |_|\_\___/\__\__,_/__/");
+  print("                       ");
 }
