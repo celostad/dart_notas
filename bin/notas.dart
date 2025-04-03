@@ -69,3 +69,5 @@ void cabecalho() {
   print(" |_|\_\___/\__\__,_/__/");
   print("                       ");
 }
+
+// ref: https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
