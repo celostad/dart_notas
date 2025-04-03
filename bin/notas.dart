@@ -2,9 +2,7 @@ import 'dart:io';
 
 void main() {
   List<String> notas = <String>[];
-  getComando();
-  adicionaNota(notas);
-  listarNotas(notas);
+  menu(notas);
 }
 
 String getComando() {
@@ -41,5 +39,22 @@ void listarNotas(List<String> notas){
   // notas.forEach(print); // faz a mesma coisa
   for(var i=0; i < notas.length; i++){
     print(notas[i]);
+  }
+}
+
+void menu(List<String> notas){
+  String comando = getComando();
+
+  switch(comando){
+    case "1":
+    adicionaNota(notas);
+    menu(notas);
+
+    case "2":
+    listarNotas(notas);
+    menu(notas);
+
+    case "3":
+    print("Até breve!");
   }
 }
